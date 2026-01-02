@@ -1,0 +1,19 @@
+{
+	"geode": "4.10.0",
+	"gd": {
+		"win": "2.2074"
+	},
+	"id": "alphalaneous.get-sober",
+	"name": "Get Sober",
+	"version": "v1.0.0-alpha.1",
+	"developer": "Alphalaneous",
+	"description": "No more Wine file explorer",
+	"links": {
+        "homepage": "https://linktr.ee/Alphalaneous",
+        "source": "https://github.com/Alphalaneous/Get-Sober",
+        "community": "https://discord.gg/Txn2CA5dHF"
+    },
+    "tags": [
+        "enhancement", "interface"
+    ]
+}
