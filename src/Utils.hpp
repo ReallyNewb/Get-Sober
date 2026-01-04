@@ -56,13 +56,15 @@ namespace sobriety::utils {
     }
 
     static bool isWine() {
+        static bool wine = [] -> bool {
+            HMODULE hModule = GetModuleHandleA("ntdll.dll");
+            if (!hModule) return false;
+            FARPROC func = GetProcAddress(hModule, "wine_get_version");
+            if (!func) return false;
+            return true;
+        }();
         
-        HMODULE hModule = GetModuleHandleA("ntdll.dll");
-        if (!hModule) return false;
-        FARPROC func = GetProcAddress(hModule, "wine_get_version");
-        if (!func) return false;
-
-        return true;
+        return wine;
     }
 
     /*
